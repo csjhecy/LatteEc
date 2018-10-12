@@ -1,0 +1,37 @@
+
+项目关系
+
+   项目需要依赖的module
+
+      app          项目
+
+      annotation  java library     这个里面用到的注解
+      compiler    java library     这个里面管理
+      core        android library  这个里面写一些核心的内容
+      ec          android library  这个里面写一类的内容  比如电商ec
+
+
+如果两个android library 之间有依赖关系，包名一写不要相同不然会有冲突，编译不过去
+
+项目搭建
+    创建项目 example
+    1,创建 注解module    annotations
+    2,创建 编译器module  compiler
+    3,创建 核心module    core
+    4,创建 一类的业务module  ec
+    项目依赖关系
+    核心module 依赖于注解module
+    一类的业务module 依赖于核心库 core
+    项目example 依赖于一类业务module ec  同时依赖于编译器module compiler
+
+在依赖项目时，可以使用 annotationProcessor project(':latte-ec')  这样
+由于core module 都依赖了其它的 可以把相同的引用删除掉，项目下面的也删除掉，都挪到核心 core build 里
+
+
+使用git
+
+
+
+
+
+
