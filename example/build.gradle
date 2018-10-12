@@ -20,6 +20,7 @@ android {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation project(':latte-ec')
     implementation project(':latte-compiler')
+    implementation project(':latte-ec')
+    implementation project(':latte-core')
 }
