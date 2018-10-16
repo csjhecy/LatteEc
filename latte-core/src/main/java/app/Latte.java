@@ -37,7 +37,7 @@ public final class Latte {
         return Configuration.getInstace();
     }
 
-    private static final WeakHashMap getConfigurations(){
+    public static final WeakHashMap getConfigurations(){
         return Configuration.getInstace().getLatteConfigs();
     }
 }
